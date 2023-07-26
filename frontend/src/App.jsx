@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Footer from './components/footer'
+import Footer from './components/Footer'
 import Tippy from '@tippyjs/react';
 import { useMutation } from 'react-query'
 import axios from 'axios'
