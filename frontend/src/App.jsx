@@ -33,8 +33,8 @@ function App() {
     },
     onError: (error) => {
       setError(true)
-      console.log(error.response.data)
-      setMensaje(error.response.data.message)
+      console.log(error?.response?.data ? error.response.data : error)
+      setMensaje(error?.response?.data?.message ? error.response.data.message : 'Error al descifrar el texto')
       setAlerta(true)
     }
   })
