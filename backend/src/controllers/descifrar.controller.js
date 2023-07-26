@@ -1,4 +1,4 @@
-export default async function decifrar(req, res) {
+export default async function descifrar(req, res) {
     try {
         const { texto_cifrado } = req.body;
 
@@ -11,7 +11,7 @@ export default async function decifrar(req, res) {
 
         console.log(partes)
 
-        const texto_decifrado = {
+        const texto_descifrado = {
             first_name: partes[0],
             last_name: partes[1],
             id: partes[2]
@@ -19,9 +19,9 @@ export default async function decifrar(req, res) {
 
 
         res.status(200).json({
-            message: "Texto decifrado correctamente",
+            message: "Texto descifrado correctamente",
             data: {
-                texto_decifrado,
+                texto_descifrado,
                 texto_cifrado
             }
         })
